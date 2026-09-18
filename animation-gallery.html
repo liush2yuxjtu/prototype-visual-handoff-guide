@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Before → Now SVG Animation Gallery</title>
+<title>Before → Now Progressive SVG Diff Gallery</title>
 <style>
 :root{--bg:#FAF9F5;--paper:#fff;--ink:#141413;--muted:#87867F;--line:#D1CFC5;--clay:#D97757}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","PingFang SC",sans-serif}
@@ -13,19 +13,19 @@ p{color:var(--muted);max-width:760px}.toolbar{display:flex;gap:10px;flex-wrap:wr
 </style>
 </head><body><main>
 <div class="mono">Reusable SVG assets · GitHub Pages</div>
-<h1>BEFORE → NOW<br>Animation Gallery</h1>
-<p>每个变化都是独立的 <code>.svg</code> 文件。动画语义统一为 <b>BEFORE → NOW → 停在 NOW</b>。HTML 页面只引用 URL；Agent 可以在其它 GitHub Pages、spec、prototype 或 handoff 中直接复用。</p>
-<div class="toolbar"><button class="btn primary" type="button" id="replayAll">Replay all</button><span class="mono" style="align-self:center">Human controls replay · animation never auto-reverts</span></div>
+<h1>BEFORE → NOW<br>Progressive SVG Diff</h1>
+<p>每个变化都是独立的 <code>.svg</code> 文件，采用 <b>dual-artifact comparison</b>：左侧 BEFORE artifact 始终可见，右侧 NOW artifact 用 <b>progressive line-draw animation</b> 逐线生成并停在 NOW。HTML 只引用 SVG URL；Agent 可在其它 Pages、spec、prototype 或 handoff 中直接复用。</p>
+<div class="toolbar"><button class="btn primary" type="button" id="replayAll">Replay all</button><span class="mono" style="align-self:center">TWO ARTIFACTS · BEFORE [LEFT] → NOW [RIGHT] · PROGRESSIVE LINE-DRAW</span></div>
 <div class="grid">
-<article class="card"><img src="assets/micro-ui-before-now.svg" alt="Micro UI BEFORE 到 NOW 动画"><div class="meta"><b>Micro UI</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/micro-ui-before-now.svg">OPEN SVG ↗</a></div></div></article>
-<article class="card"><img src="assets/layout-before-now.svg" alt="Page Layout BEFORE 到 NOW 动画"><div class="meta"><b>Page Layout</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/layout-before-now.svg">OPEN SVG ↗</a></div></div></article>
-<article class="card"><img src="assets/wireflow-before-now.svg" alt="Wireflow BEFORE 到 NOW 动画"><div class="meta"><b>Wireflow</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/wireflow-before-now.svg">OPEN SVG ↗</a></div></div></article>
-<article class="card"><img src="assets/interaction-before-now.svg" alt="Interaction BEFORE 到 NOW 动画"><div class="meta"><b>Interaction</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/interaction-before-now.svg">OPEN SVG ↗</a></div></div></article>
-<article class="card"><img src="assets/share-before-now.svg" alt="Share / GitHub Pages BEFORE 到 NOW 动画"><div class="meta"><b>Share / GitHub Pages</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/share-before-now.svg">OPEN SVG ↗</a></div></div></article>
-<article class="card"><img src="assets/runtime-before-now.svg" alt="Runtime / Vercel Preview BEFORE 到 NOW 动画"><div class="meta"><b>Runtime / Vercel Preview</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/runtime-before-now.svg">OPEN SVG ↗</a></div></div></article>
-<article class="card"><img src="assets/handoff-before-now.svg" alt="Agent Handoff BEFORE 到 NOW 动画"><div class="meta"><b>Agent Handoff</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/handoff-before-now.svg">OPEN SVG ↗</a></div></div></article>
+<article class="card"><img src="assets/micro-ui-before-now.svg" alt="Micro UI Before → Now Progressive SVG Diff"><div class="meta"><b>Micro UI</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/micro-ui-before-now.svg">OPEN SVG ↗</a></div></div></article>
+<article class="card"><img src="assets/layout-before-now.svg" alt="Page Layout Before → Now Progressive SVG Diff"><div class="meta"><b>Page Layout</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/layout-before-now.svg">OPEN SVG ↗</a></div></div></article>
+<article class="card"><img src="assets/wireflow-before-now.svg" alt="Wireflow Before → Now Progressive SVG Diff"><div class="meta"><b>Wireflow</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/wireflow-before-now.svg">OPEN SVG ↗</a></div></div></article>
+<article class="card"><img src="assets/interaction-before-now.svg" alt="Interaction Before → Now Progressive SVG Diff"><div class="meta"><b>Interaction</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/interaction-before-now.svg">OPEN SVG ↗</a></div></div></article>
+<article class="card"><img src="assets/share-before-now.svg" alt="Share / GitHub Pages Before → Now Progressive SVG Diff"><div class="meta"><b>Share / GitHub Pages</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/share-before-now.svg">OPEN SVG ↗</a></div></div></article>
+<article class="card"><img src="assets/runtime-before-now.svg" alt="Runtime / Vercel Preview Before → Now Progressive SVG Diff"><div class="meta"><b>Runtime / Vercel Preview</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/runtime-before-now.svg">OPEN SVG ↗</a></div></div></article>
+<article class="card"><img src="assets/handoff-before-now.svg" alt="Agent Handoff Before → Now Progressive SVG Diff"><div class="meta"><b>Agent Handoff</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/handoff-before-now.svg">OPEN SVG ↗</a></div></div></article>
 </div>
-<a class="back" href="./">← 返回 Prototype Delivery Router</a>
+<a class="back" href="./">← 返回 Prototype Delivery Router · Progressive SVG Diff</a>
 <script>
 (function(){
   function replay(img){
