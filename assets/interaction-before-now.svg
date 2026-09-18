@@ -1,26 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
-<title id="t">交互改动：静态界面变成可反馈的状态交互</title><desc id="d">按钮被点击后从 Idle 变成 Loading 再变成 Done。</desc>
-
-<style>
-  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
-  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
-  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-  text{dominant-baseline:middle}
-</style>
-<rect width="760" height="380" rx="28" class="bg"/>
-<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · INTERACTION</text>
-<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
-<rect x="110" y="112" width="540" height="210" rx="18" class="paper line"/>
-<rect x="145" y="146" width="250" height="42" rx="10" fill="#fff" stroke="#D1CFC5"/>
-<text x="166" y="167" class="sans muted" font-size="14">搜索关键词</text>
-<rect x="420" y="146" width="92" height="42" rx="10" fill="#fff" stroke="#3D3D3A" stroke-width="2">
- <animate attributeName="fill" values="#fff;#fff;#FBF0EC;#FBF0EC" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="6s" repeatCount="1" fill="freeze"/>
- <animate attributeName="stroke" values="#3D3D3A;#3D3D3A;#D97757;#788C5D" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="6s" repeatCount="1" fill="freeze"/>
-</rect>
-<text x="466" y="167" text-anchor="middle" class="sans ink" font-size="14" font-weight="650">搜索</text>
-<g><text x="145" y="232" class="mono muted" font-size="12">BEFORE · 点击后没有状态反馈</text><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.28;0.48;1" dur="6s" repeatCount="1" fill="freeze"/></g>
-<g opacity="0"><circle cx="168" cy="232" r="9" fill="none" stroke="#D97757" stroke-width="3" stroke-dasharray="14 8"><animateTransform attributeName="transform" type="rotate" from="0 168 232" to="360 168 232" dur=".9s" repeatCount="1" fill="freeze"/></circle><text x="188" y="232" class="mono clay" font-size="12">NOW · 正在搜索…</text><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.52;1" dur="6s" repeatCount="1" fill="freeze"/></g>
-<g opacity="0"><circle cx="168" cy="232" r="10" fill="#788C5D"/><path d="M163 232l4 4 7-9" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><text x="188" y="232" class="mono olive" font-size="12">NOW · 找到 12 个结果</text><rect x="145" y="260" width="370" height="34" rx="8" fill="#F0EEE6"/><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.52;1" dur="6s" repeatCount="1" fill="freeze"/></g>
-<circle cx="466" cy="167" r="5" fill="#D97757" opacity="0"><animate attributeName="r" values="5;22;5" dur=".7s" begin="1.25s;7.25s;13.25s" repeatCount="1"/><animate attributeName="opacity" values=".6;0;0" dur=".7s" begin="1.25s;7.25s;13.25s" repeatCount="1"/></circle>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="t d">
+  <title id="t">Interaction Before to Now Progressive SVG Diff</title>
+  <desc id="d">Two-artifact Before to Now progressive line-draw SVG diff. The Before artifact stays visible on the left while the Now artifact is progressively drawn on the right.</desc>
+  <style>
+    .bg{fill:#FAF9F5}.card{fill:#fff;stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}.ink{fill:#141413}.clay{fill:#B85C3E}
+    .label{font:700 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.title{font:600 19px system-ui,-apple-system,Segoe UI,sans-serif}
+    .body{font:13px system-ui,-apple-system,Segoe UI,sans-serif}.line{stroke:#3D3D3A;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .soft{stroke:#D1CFC5;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .now{stroke:#D97757}.fillNow{fill:#FBF0EC;stroke:#D97757;stroke-width:2}.fillSoft{fill:#fff;stroke:#D1CFC5;stroke-width:2}
+    .draw{fill:none;stroke:#D97757;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .drawSoft{fill:none;stroke:#3D3D3A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .fade{opacity:0}.arrow{stroke:#87867F;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+    @media (prefers-reduced-motion:reduce){.draw,.drawSoft,.arrow{stroke-dashoffset:0}.fade{opacity:1}}
+  </style>
+  <rect class="bg" width="920" height="420" rx="24"/>
+  <text x="52" y="48" class="label muted">BEFORE</text>
+  <text x="584" y="48" class="label clay">NOW</text>
+  <text x="52" y="79" class="title ink">Silent action → visible feedback states</text>
+  <g transform="translate(52 105)">
+    <rect x="0" y="0" width="280" height="205" rx="12" class="card"/><rect x="28" y="35" width="224" height="44" rx="8" class="fillSoft"/>
+    <rect x="28" y="98" width="92" height="42" rx="8" class="fillSoft"/><text x="74" y="125" text-anchor="middle" class="body ink">Search</text></g>
+  <g>
+    <path class="arrow" pathLength="1" d="M420 210 H500"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".6s" begin=".25s" fill="freeze"/></path>
+    <path class="arrow" pathLength="1" d="M489 199 L500 210 L489 221"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".35s" begin=".68s" fill="freeze"/></path>
+  </g>
+  <g transform="translate(584 105)">
+    <rect x="0" y="0" width="280" height="205" rx="14" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".65s" begin="1s" fill="freeze"/></rect>
+    <rect x="28" y="35" width="224" height="44" rx="10" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".45s" begin="1.6s" fill="freeze"/></rect>
+    <rect x="28" y="98" width="92" height="42" rx="10" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".45s" begin="1.98s" fill="freeze"/></rect>
+    <path d="M145 119 H165" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".22s" begin="2.32s" fill="freeze"/></path>
+    <circle cx="184" cy="119" r="11" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".4s" begin="2.48s" fill="freeze"/></circle>
+    <path d="M180 119 L184 123 L192 114" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".32s" begin="2.82s" fill="freeze"/></path>
+    <text x="218" y="124" class="body clay fade">Done<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="3.08s" fill="freeze"/></text></g>
+  <text x="52" y="392" class="body muted">Before remains visible · Now is progressively generated line by line</text>
 </svg>
