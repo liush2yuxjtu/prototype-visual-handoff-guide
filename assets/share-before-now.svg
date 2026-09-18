@@ -1,30 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
-<title id="t">分享方式改动：本地 HTML 变成 GitHub Pages URL</title><desc id="d">本地 prototype 文件连续变化成公开可分享的 GitHub Pages 页面。</desc>
-
-<style>
-  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
-  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
-  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-  text{dominant-baseline:middle}
-</style>
-<rect width="760" height="380" rx="28" class="bg"/>
-<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · SHARE</text>
-<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
-<g>
- <rect x="98" y="126" width="240" height="170" rx="14" class="paper line"/>
- <path d="M142 158h86l26 26v76H142z" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="2"/><path d="M228 158v26h26" fill="none" stroke="#D1CFC5" stroke-width="2"/>
- <text x="185" y="220" class="mono muted" font-size="12">prototype.html</text><text x="165" y="250" class="sans muted" font-size="13">只在本地</text>
- <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.28;0.48;1" dur="5.5s" repeatCount="1" fill="freeze"/>
-</g>
-<path d="M365 211H430" stroke="#D97757" stroke-width="3" stroke-linecap="round"/>
-<path d="M421 202l12 9-12 9" fill="none" stroke="#D97757" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<g opacity="0">
- <rect x="456" y="126" width="230" height="170" rx="14" class="paper" stroke="#D97757" stroke-width="2"/>
- <rect x="456" y="126" width="230" height="34" rx="14" fill="#F0EEE6"/><circle cx="475" cy="143" r="4" fill="#D1CFC5"/><circle cx="488" cy="143" r="4" fill="#D1CFC5"/><circle cx="501" cy="143" r="4" fill="#D1CFC5"/>
- <rect x="478" y="177" width="185" height="25" rx="8" fill="#FBF0EC" stroke="#D97757"/><text x="570" y="190" text-anchor="middle" class="mono clay" font-size="9">…github.io/prototype/</text>
- <rect x="478" y="220" width="78" height="45" rx="8" fill="#F0EEE6"/><rect x="568" y="220" width="95" height="45" rx="8" fill="#F0EEE6"/>
- <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.52;1" dur="5.5s" repeatCount="1" fill="freeze"/>
-</g>
-<text x="98" y="326" class="mono muted" font-size="11">BEFORE · LOCAL ONLY</text><g opacity="0"><text x="456" y="326" class="mono clay" font-size="11">NOW · SHAREABLE PRIMARY SOURCE</text><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.52;1" dur="5.5s" repeatCount="1" fill="freeze"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="t d">
+  <title id="t">Share Before to Now Progressive SVG Diff</title>
+  <desc id="d">Two-artifact Before to Now progressive line-draw SVG diff. The Before artifact stays visible on the left while the Now artifact is progressively drawn on the right.</desc>
+  <style>
+    .bg{fill:#FAF9F5}.card{fill:#fff;stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}.ink{fill:#141413}.clay{fill:#B85C3E}
+    .label{font:700 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.title{font:600 19px system-ui,-apple-system,Segoe UI,sans-serif}
+    .body{font:13px system-ui,-apple-system,Segoe UI,sans-serif}.line{stroke:#3D3D3A;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .soft{stroke:#D1CFC5;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .now{stroke:#D97757}.fillNow{fill:#FBF0EC;stroke:#D97757;stroke-width:2}.fillSoft{fill:#fff;stroke:#D1CFC5;stroke-width:2}
+    .draw{fill:none;stroke:#D97757;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .drawSoft{fill:none;stroke:#3D3D3A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .fade{opacity:0}.arrow{stroke:#87867F;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+    @media (prefers-reduced-motion:reduce){.draw,.drawSoft,.arrow{stroke-dashoffset:0}.fade{opacity:1}}
+  </style>
+  <rect class="bg" width="920" height="420" rx="24"/>
+  <text x="52" y="48" class="label muted">BEFORE</text>
+  <text x="584" y="48" class="label clay">NOW</text>
+  <text x="52" y="79" class="title ink">Local prototype → stable GitHub Pages URL</text>
+  <g transform="translate(52 105)">
+    <rect x="0" y="0" width="280" height="205" rx="12" class="card"/><path d="M0 38 H280" class="soft"/><circle cx="18" cy="19" r="4" fill="#D1CFC5"/><circle cx="32" cy="19" r="4" fill="#D1CFC5"/><circle cx="46" cy="19" r="4" fill="#D1CFC5"/>
+    <text x="22" y="78" class="body muted">localhost:3000</text><path d="M22 108 H220 M22 134 H170" class="soft"/></g>
+  <g>
+    <path class="arrow" pathLength="1" d="M420 210 H500"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".6s" begin=".25s" fill="freeze"/></path>
+    <path class="arrow" pathLength="1" d="M489 199 L500 210 L489 221"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".35s" begin=".68s" fill="freeze"/></path>
+  </g>
+  <g transform="translate(584 105)">
+    <rect x="0" y="0" width="280" height="205" rx="12" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".6s" begin="1s" fill="freeze"/></rect>
+    <path d="M0 38 H280" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".3s" begin="1.55s" fill="freeze"/></path>
+    <circle cx="18" cy="19" r="4" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".2s" begin="1.78s" fill="freeze"/></circle>
+    <circle cx="32" cy="19" r="4" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".2s" begin="1.9s" fill="freeze"/></circle>
+    <circle cx="46" cy="19" r="4" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".2s" begin="2.02s" fill="freeze"/></circle>
+    <rect x="18" y="57" width="244" height="36" rx="8" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".5s" begin="2.15s" fill="freeze"/></rect>
+    <text x="30" y="80" class="body clay fade">liush2yuxjtu.github.io/…<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="2.58s" fill="freeze"/></text>
+    <path d="M22 118 H238 M22 144 H190" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".55s" begin="2.78s" fill="freeze"/></path></g>
+  <text x="52" y="392" class="body muted">Before remains visible · Now is progressively generated line by line</text>
 </svg>
