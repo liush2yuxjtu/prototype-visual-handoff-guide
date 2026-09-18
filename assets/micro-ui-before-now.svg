@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+<title id="t">微小 UI 改动：方角按钮变成圆角按钮</title><desc id="d">同一个面板和按钮从 BEFORE 连续变成 NOW。</desc>
+
+<style>
+  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
+  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
+  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+  text{dominant-baseline:middle}
+</style>
+<rect width="760" height="380" rx="28" class="bg"/>
+<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · MICRO UI</text>
+<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
+<rect x="96" y="112" width="568" height="205" rx="6" class="paper line">
+  <animate attributeName="rx" values="6;6;24;24;6" keyTimes="0;0.2;0.55;0.82;1" dur="5s" repeatCount="indefinite"/>
+  <animate attributeName="stroke" values="#D1CFC5;#D1CFC5;#E4A18A;#E4A18A;#D1CFC5" keyTimes="0;0.2;0.55;0.82;1" dur="5s" repeatCount="indefinite"/>
+</rect>
+<rect x="132" y="147" width="130" height="12" rx="6" fill="#D1CFC5"/>
+<rect x="132" y="181" width="362" height="10" rx="5" class="soft"/>
+<rect x="132" y="207" width="286" height="10" rx="5" class="soft"/>
+<rect x="132" y="248" width="126" height="46" rx="2" fill="#fff" stroke="#3D3D3A" stroke-width="2">
+  <animate attributeName="rx" values="2;2;16;16;2" keyTimes="0;0.2;0.55;0.82;1" dur="5s" repeatCount="indefinite"/>
+  <animate attributeName="fill" values="#fff;#fff;#FBF0EC;#FBF0EC;#fff" keyTimes="0;0.2;0.55;0.82;1" dur="5s" repeatCount="indefinite"/>
+  <animate attributeName="stroke" values="#3D3D3A;#3D3D3A;#D97757;#D97757;#3D3D3A" keyTimes="0;0.2;0.55;0.82;1" dur="5s" repeatCount="indefinite"/>
+</rect>
+<text x="195" y="271" text-anchor="middle" class="sans ink" font-size="15" font-weight="650">保存</text>
+<g>
+ <text x="514" y="272" class="mono muted" font-size="13">BEFORE · 方角</text>
+ <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.28;0.48;0.86;1" dur="5s" repeatCount="indefinite"/>
+</g>
+<g opacity="0">
+ <text x="514" y="272" class="mono clay" font-size="13">NOW · 圆角</text>
+ <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.28;0.48;0.86;1" dur="5s" repeatCount="indefinite"/>
+</g>
+<path d="M424 271 H488" stroke="#D97757" stroke-width="2" stroke-linecap="round"/>
+<circle cx="424" cy="271" r="4" class="clay"><animate attributeName="cx" values="424;424;488;488;424" keyTimes="0;0.2;0.55;0.82;1" dur="5s" repeatCount="indefinite"/></circle>
+</svg>
