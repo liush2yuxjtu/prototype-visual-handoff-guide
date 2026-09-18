@@ -56,6 +56,16 @@ h3{font-size:20px}
 .route-stage .recommend{font-family:var(--mono);font-size:11px;color:var(--clay)}
 .route-stage .why{max-width:520px;color:var(--g500);font-size:13px;margin-top:6px}
 .demo{margin-top:24px;min-height:300px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--g100);border:1px solid var(--g200);padding:24px}
+.asset-demo{width:min(720px,100%)}
+.asset-demo img{display:block;width:100%;height:auto;border-radius:14px}
+.asset-caption{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px;font-family:var(--mono);font-size:10px;color:var(--g500)}
+.asset-caption a{color:var(--clay);text-decoration:none}
+.asset-caption a:hover{text-decoration:underline}
+.asset-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.asset-card{border:1px solid var(--g300);border-radius:14px;overflow:hidden;background:#fff}
+.asset-card img{display:block;width:100%;height:auto}
+.asset-card .meta{padding:10px 12px;border-top:1px solid var(--g200);font-size:12px;display:flex;justify-content:space-between;gap:10px}
+.asset-card .meta a{font-family:var(--mono);font-size:9px;color:var(--clay);text-decoration:none}
 .compare{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;width:min(680px,100%)}
 .mini-panel{background:#fff;border:1px solid var(--g300);border-radius:9px;padding:18px;min-height:170px}
 .mini-panel.after{border-radius:18px}
@@ -133,7 +143,7 @@ h3{font-size:20px}
     <div class="eyebrow">Prototype Delivery · Visual-first</div>
     <h1>不要解释给我听。<br><em>先让我看见，再让我上手。</em></h1>
     <p class="lead">把 Matt Pocock 的保真度梯子，改造成一套适合 ChatGPT → Human → Coding Agent 的可视化交付路由。</p>
-    <div class="hero-note"><b>唯一原则：</b>不用固定走完整流程。选择“足以回答当前问题的最低复杂度可视化”。</div>
+    <div class="hero-note"><b>唯一原则：</b>不用固定走完整流程。选择“足以回答当前问题的最低复杂度可视化”。所有“改动”默认用 <b>BEFORE → NOW</b> 动画呈现，而不是两张静态快照。</div>
   </header>
 
   <section class="section">
@@ -179,7 +189,7 @@ h3{font-size:20px}
         <div class="eyebrow">02 · ChatGPT-native router</div>
         <h2>但我们的交付方式不必照着梯子走</h2>
       </div>
-      <div class="section-note">点左边一种改动，右边直接显示“最轻、最合适”的交付物。</div>
+      <div class="section-note">点左边一种改动，右边直接播放对应的 BEFORE → NOW SVG。每个动画也是一个独立 GitHub 文件。</div>
     </div>
 
     <div class="router">
@@ -226,17 +236,11 @@ h3{font-size:20px}
       </div>
       <div class="section-note">Flowchart 只告诉你“发生什么”；Wireframe 只告诉你“长什么样”。Wireflow 把 Screen + State + Transition 合在一起。</div>
     </div>
-    <div class="card" style="padding:26px">
-      <div class="wireflow" aria-label="Wireflow 示例">
-        <div class="screen"><div class="eyebrow" style="font-size:8px">S01 · IDLE</div><div class="bar"></div><div class="block"></div><div class="block"></div><div class="cta"></div></div>
-        <div class="flow-arrow">→</div>
-        <div class="screen"><div class="eyebrow" style="font-size:8px">S02 · SEARCHING</div><div class="bar"></div><div class="block" style="opacity:.45"></div><div class="block" style="opacity:.45"></div><div class="cta" style="background:var(--g200);border-color:var(--g300)"></div></div>
-        <div class="flow-arrow">→</div>
-        <div class="screen"><div class="eyebrow" style="font-size:8px">S03 · RESULTS</div><div class="bar"></div><div class="block"></div><div class="block"></div><div class="block"></div></div>
-        <div class="flow-arrow">→</div>
-        <div class="screen"><div class="eyebrow" style="font-size:8px">S04 · DETAIL</div><div class="bar" style="width:65%"></div><div class="block" style="height:70px"></div><div class="cta"></div></div>
+    <div class="card" style="padding:18px">
+      <div class="asset-demo" style="margin:auto">
+        <img src="assets/wireflow-before-now.svg" alt="旧流程到当前 Wireflow 的 BEFORE 到 NOW 动画">
+        <div class="asset-caption"><span>OLD FLOW → CURRENT WIREFLOW</span><a href="assets/wireflow-before-now.svg">OPEN SVG ↗</a></div>
       </div>
-      <div style="text-align:center;color:var(--g500);font-size:12px;margin-top:12px">每一个节点都是一个“用户真的看到的 Screen”，箭头只负责表达 interaction / transition。</div>
     </div>
   </section>
 
@@ -246,9 +250,15 @@ h3{font-size:20px}
         <div class="eyebrow">04 · Handoff</div>
         <h2>Prototype 给 Human 决策；Primary Source 给 Agent 接手</h2>
       </div>
-      <div class="section-note">不要把 Prototype 再翻译成一份 10,000 字说明。Handoff 应该是一个很小的索引。</div>
+      <div class="section-note">不要把 Prototype 再翻译成一份 10,000 字说明。下面先直接播放“大文档 → 小索引”的 BEFORE → NOW。</div>
     </div>
 
+    <div class="card" style="padding:18px;margin-bottom:18px">
+      <div class="asset-demo" style="margin:auto">
+        <img src="assets/handoff-before-now.svg" alt="冗长 Handoff 到 Primary Source 索引的 BEFORE 到 NOW 动画">
+        <div class="asset-caption"><span>LONG HANDOFF → PRIMARY SOURCE INDEX</span><a href="assets/handoff-before-now.svg">OPEN SVG ↗</a></div>
+      </div>
+    </div>
     <div class="handoff">
       <div class="card packet">
         <div class="eyebrow">Prototype handoff packet</div>
@@ -289,79 +299,19 @@ h3{font-size:20px}
         <h2>以后默认这样选</h2>
       </div>
     </div>
-    <div class="card" style="padding:24px;overflow:auto">
-      <svg viewBox="0 0 1040 310" style="width:100%;min-width:820px;display:block" role="img" aria-label="默认可视化 Prototype 交付路由">
-        <defs>
-          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0 0 L10 5 L0 10Z" fill="#87867F"></path>
-          </marker>
-        </defs>
-        <g font-family="system-ui,-apple-system,Segoe UI,sans-serif">
-          <text x="20" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#87867F">QUESTION SIZE</text>
-          <path d="M135 22 H995" stroke="#D1CFC5" stroke-width="1"></path>
-          <text x="135" y="43" font-size="11" fill="#87867F">小 / 局部</text>
-          <text x="930" y="43" font-size="11" fill="#87867F">大 / 真实</text>
-
-          <path d="M165 145 H285" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"></path>
-          <path d="M365 145 H485" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"></path>
-          <path d="M565 145 H685" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"></path>
-          <path d="M765 145 H885" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"></path>
-
-          <g transform="translate(20,85)">
-            <rect width="145" height="120" rx="14" fill="#fff" stroke="#D1CFC5" stroke-width="1.5"></rect>
-            <text x="16" y="25" font-size="10" fill="#D97757" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">MICRO UI</text>
-            <text x="16" y="52" font-size="16" font-weight="650">Live SVG</text>
-            <text x="16" y="75" font-size="12" fill="#87867F">Animated change</text>
-            <rect x="16" y="88" width="70" height="20" rx="2" fill="#F0EEE6" stroke="#D97757">
-              <animate attributeName="rx" values="2;10;2" dur="3s" repeatCount="indefinite"></animate>
-            </rect>
-          </g>
-
-          <g transform="translate(220,85)">
-            <rect width="145" height="120" rx="14" fill="#fff" stroke="#D1CFC5" stroke-width="1.5"></rect>
-            <text x="16" y="25" font-size="10" fill="#D97757" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">FLOW</text>
-            <text x="16" y="52" font-size="16" font-weight="650">Wireflow</text>
-            <text x="16" y="75" font-size="12" fill="#87867F">Screens + State</text>
-            <rect x="16" y="88" width="24" height="20" rx="3" fill="#fff" stroke="#87867F"></rect>
-            <path d="M45 98 H66" stroke="#87867F" marker-end="url(#arr)"></path>
-            <rect x="73" y="88" width="24" height="20" rx="3" fill="#fff" stroke="#87867F"></rect>
-          </g>
-
-          <g transform="translate(420,85)">
-            <rect width="145" height="120" rx="14" fill="#fff" stroke="#D1CFC5" stroke-width="1.5"></rect>
-            <text x="16" y="25" font-size="10" fill="#D97757" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">FEEL</text>
-            <text x="16" y="52" font-size="16" font-weight="650">Inline App</text>
-            <text x="16" y="75" font-size="12" fill="#87867F">ChatGPT 内直接玩</text>
-            <rect x="16" y="88" width="54" height="20" rx="6" fill="rgba(217,119,87,.10)" stroke="#D97757"></rect>
-          </g>
-
-          <g transform="translate(620,85)">
-            <rect width="145" height="120" rx="14" fill="#fff" stroke="#D1CFC5" stroke-width="1.5"></rect>
-            <text x="16" y="25" font-size="10" fill="#D97757" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">SHARE</text>
-            <text x="16" y="52" font-size="16" font-weight="650">GitHub Pages</text>
-            <text x="16" y="75" font-size="12" fill="#87867F">稳定 URL / 留存</text>
-            <text x="16" y="102" font-size="10" fill="#6A8CAF" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">https://…github.io/</text>
-          </g>
-
-          <g transform="translate(820,85)">
-            <rect width="180" height="120" rx="14" fill="rgba(120,140,93,.06)" stroke="#788C5D" stroke-width="1.5"></rect>
-            <text x="16" y="25" font-size="10" fill="#66794C" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">REAL ENGINEERING</text>
-            <text x="16" y="52" font-size="16" font-weight="650">Vercel Preview</text>
-            <text x="16" y="75" font-size="12" fill="#87867F">真实代码 / 路由 / API</text>
-            <text x="16" y="102" font-size="11" fill="#66794C">→ Runtime acceptance</text>
-          </g>
-
-          <text x="20" y="244" font-size="12" fill="#3D3D3A" font-weight="650">ELI5</text>
-          <text x="70" y="244" font-size="12" fill="#87867F">不是默认第一步，而是“当问题主要是意义 / 原因 / 决策解释”时使用的高级文字层。</text>
-          <text x="20" y="278" font-size="12" fill="#3D3D3A" font-weight="650">PRODUCTION</text>
-          <text x="110" y="278" font-size="12" fill="#87867F">只有 Preview 的关键 Screens / Flows / States 在真实 Runtime 中通过验收后才进入。</text>
-        </g>
-      </svg>
+    <div class="asset-grid">
+      <div class="asset-card"><img src="assets/micro-ui-before-now.svg" alt="Micro UI BEFORE 到 NOW 动画"><div class="meta"><b>Micro UI</b><a href="assets/micro-ui-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/layout-before-now.svg" alt="Layout BEFORE 到 NOW 动画"><div class="meta"><b>Layout</b><a href="assets/layout-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/wireflow-before-now.svg" alt="Wireflow BEFORE 到 NOW 动画"><div class="meta"><b>Flow / State</b><a href="assets/wireflow-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/interaction-before-now.svg" alt="Interaction BEFORE 到 NOW 动画"><div class="meta"><b>Interaction</b><a href="assets/interaction-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/share-before-now.svg" alt="Share BEFORE 到 NOW 动画"><div class="meta"><b>GitHub Pages</b><a href="assets/share-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/runtime-before-now.svg" alt="Runtime BEFORE 到 NOW 动画"><div class="meta"><b>Vercel Preview</b><a href="assets/runtime-before-now.svg">SVG ↗</a></div></div>
     </div>
+    <div style="margin-top:18px"><a class="pill" style="text-decoration:none;color:var(--clay)" href="animation-gallery.html">打开完整 Animation Gallery →</a></div>
   </section>
 
   <footer class="footer-rule">
-    <span>Visual-first Prototype Delivery · v2 · Live SVG</span>
+    <span>Visual-first Prototype Delivery · v3 · BEFORE → NOW SVG Library</span>
     <span>Human reacts to the thing → Agent implements the decision.</span>
   </footer>
 </div>
@@ -375,51 +325,56 @@ h3{font-size:20px}
   var costPill=document.getElementById('costPill');
   var buttons=[].slice.call(document.querySelectorAll('.route-btn'));
 
+  var assetBase='https://liush2yuxjtu.github.io/prototype-visual-handoff-guide/assets/';
+  function assetDemo(file,label){
+    var url=assetBase+file;
+    return '<div class="asset-demo"><img src="'+url+'" alt="'+label+' BEFORE 到 NOW 动画"><div class="asset-caption"><span>BEFORE → NOW · LIVE SVG</span><a href="'+url+'" target="_blank" rel="noreferrer">OPEN SVG ↗</a></div></div>';
+  }
+
   var data={
     micro:{
-      rec:'推荐 · LIVE SVG ANIMATION',
-      title:'只改一个按钮？让 Human 直接看见变化发生。',
-      why:'不再并排放两张静态 Before / After。用一个 Live SVG 在原位连续展示方角 → 圆角、panel → 更柔和容器的变化；Human 可以暂停、重播或跳到任一端状态。',
+      rec:'推荐 · LIVE SVG · BEFORE → NOW',
+      title:'只改一个按钮？让 Human 直接看见旧状态如何变成现在。',
+      why:'不是两张静态 Before → Now。一个独立 SVG 在原位连续展示方角按钮与 panel 如何变成当前圆角方案。',
       cost:'最低成本 · 动态视觉判断',
-      html:'<div class="live-svg-demo"><div class="eyebrow">LIVE SVG · UI CHANGE</div><svg id="liveChangeSvg" viewBox="0 0 640 300" role="img" aria-label="按钮和面板从方角连续变成圆角的动画"><rect x="70" y="42" width="500" height="215" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="2" id="livePanelRect"></rect><rect x="105" y="78" width="112" height="12" rx="6" fill="#D1CFC5"></rect><rect x="105" y="112" width="360" height="10" rx="5" fill="#E6E3DA"></rect><rect x="105" y="137" width="275" height="10" rx="5" fill="#E6E3DA"></rect><rect x="105" y="184" width="112" height="48" rx="2" fill="#FFFFFF" stroke="#3D3D3A" stroke-width="2" id="liveButtonRect"></rect><text x="161" y="214" text-anchor="middle" font-size="15" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-weight="650" fill="#141413">保存</text><text x="440" y="207" font-size="12" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#87867F" id="liveSvgLabel">方角 · BEFORE</text><path d="M415 214 H430" stroke="#D97757" stroke-width="2"></path></svg><div class="svg-controls"><div class="svg-control-group"><button type="button" class="svg-control primary" id="svgPlayPause">暂停</button><button type="button" class="svg-control" id="svgReplay">重播</button><button type="button" class="svg-control" id="svgBefore">Before</button><button type="button" class="svg-control" id="svgAfter">After</button></div><div class="svg-status"><span class="live-motion-hint">自动往返 · </span><span id="svgProgressText">0%</span></div></div></div>'
+      html:assetDemo('micro-ui-before-now.svg','微小 UI')
     },
     layout:{
-      rec:'推荐 · INLINE WIREFRAME / SCREEN MOCK',
-      title:'页面层级变了？画一个 Screen 就够。',
-      why:'当问题是 sidebar、header、panel、卡片 hierarchy，直接画结构。只有当多个 Screen 的变化互相影响时，才升级到 Wireflow。',
-      cost:'低成本 · 结构判断',
-      html:'<div class="browser"><div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">screen-mock.local</span></div><div class="browser-body"><div style="display:grid;grid-template-columns:135px 1fr;gap:14px"><div style="border:1px solid var(--g300);border-radius:8px;padding:10px"><div class="fake-title"></div><div class="fake-line"></div><div class="fake-line"></div><div class="fake-line"></div></div><div><div style="height:32px;border:1px solid var(--g300);border-radius:8px;margin-bottom:12px"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div class="block" style="height:90px;border:1px solid var(--g300);border-radius:8px"></div><div class="block" style="height:90px;border:1px solid var(--g300);border-radius:8px"></div></div></div></div></div></div>'
+      rec:'推荐 · LIVE SVG WIREFRAME CHANGE',
+      title:'页面层级变化，也直接播放 BEFORE → NOW。',
+      why:'Sidebar → Top Nav、单列 → 双列这类结构变化，用动态 Wireframe 表达“旧布局如何变成当前布局”。',
+      cost:'低成本 · 结构变化',
+      html:assetDemo('layout-before-now.svg','页面布局')
     },
     flow:{
-      rec:'推荐 · WIREFLOW / STATE STORYBOARD',
-      title:'流程变了？把每一步画成 Screen。',
-      why:'不要只画抽象方框。用小型 Screen 表达用户在每个状态真正看到什么，再用箭头表达 interaction / transition。',
-      cost:'中等成本 · Flow 判断',
-      html:'<div class="wireflow"><div class="screen"><div class="eyebrow" style="font-size:8px">S01</div><div class="bar"></div><div class="block"></div><div class="cta"></div></div><div class="flow-arrow">→</div><div class="screen"><div class="eyebrow" style="font-size:8px">S02</div><div class="bar"></div><div class="block" style="opacity:.45"></div><div class="cta" style="background:var(--g200);border-color:var(--g300)"></div></div><div class="flow-arrow">→</div><div class="screen"><div class="eyebrow" style="font-size:8px">S03</div><div class="bar"></div><div class="block"></div><div class="block"></div></div></div>'
+      rec:'推荐 · LIVE SVG WIREFLOW CHANGE',
+      title:'流程变化不只画新 Flow，而是播放旧 Flow → 当前 Flow。',
+      why:'新增 Searching、Confirm、Error 等状态时，让 Screen sequence 本身发生变化，比静态流程图更容易看出产品意义。',
+      cost:'中等成本 · Flow 变化',
+      html:assetDemo('wireflow-before-now.svg','Wireflow')
     },
     interaction:{
-      rec:'推荐 · CHATGPT INLINE APP BLOCK',
-      title:'真正的问题是“点起来感觉如何”？直接让 Human 点。',
-      why:'HTML + CSS + 本地 JavaScript 状态足以验证交互时，不必先部署，也不必离开 ChatGPT。',
-      cost:'中等成本 · 真实交互',
-      html:'<div class="appdemo"><div class="eyebrow">LIVE STATE PROTOTYPE</div><div class="row" style="margin-top:12px"><button class="state-btn selected" type="button" data-state="idle">Idle</button><button class="state-btn" type="button" data-state="loading">Loading</button><button class="state-btn" type="button" data-state="done">Done</button></div><div class="state-view" id="stateView">准备搜索</div></div>'
+      rec:'推荐 · LIVE SVG STATE CHANGE + RUNNABLE',
+      title:'交互先看 BEFORE → NOW；需要感觉时再直接上手。',
+      why:'动画先说明“无反馈 → Loading → Done”发生了什么；如果 Human 还需要判断手感，再升级成 ChatGPT Inline App / Runnable Prototype。',
+      cost:'中等成本 · 状态 + 手感',
+      html:assetDemo('interaction-before-now.svg','交互状态')
     },
     share:{
-      rec:'推荐 · GITHUB PAGES',
-      title:'需要稳定 URL、跨会话或交给别人？再发布。',
-      why:'把单文件 HTML prototype 变成长期可访问的 Primary Source。它应该是可玩的 artifact，而不是一篇解释文档。',
+      rec:'推荐 · LIVE SVG + GITHUB PAGES',
+      title:'分享方式也展示“本地 → 可分享 Primary Source”。',
+      why:'动画表达本地 prototype.html 如何变成稳定 GitHub Pages URL；实际 SVG 本身也放在 GitHub，可以被其它页面直接引用。',
       cost:'可分享 · 独立 URL',
-      html:'<div class="browser"><div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">https://liush2yuxjtu.github.io/prototype/</span></div><div class="browser-body"><div class="eyebrow">SHAREABLE PROTOTYPE</div><h3 style="margin-top:6px">一个 URL = Human 可玩 + Agent 可引用</h3><div style="margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px"><div style="height:82px;border:1px solid var(--g300);border-radius:8px"></div><div style="height:82px;border:1px solid var(--g300);border-radius:8px"></div><div style="height:82px;border:1px solid var(--clay);border-radius:8px;background:rgba(217,119,87,.07)"></div></div></div></div>'
+      html:assetDemo('share-before-now.svg','GitHub Pages 分享')
     },
     real:{
-      rec:'推荐 · VERCEL DEPLOY PREVIEW',
-      title:'一旦需要真实代码环境，就停止“模拟”。',
-      why:'真实组件、route、API、数据、持久化或权限参与时，应该在真实项目中实现，并用 Preview URL 做 Runtime acceptance。',
+      rec:'推荐 · LIVE SVG + VERCEL PREVIEW',
+      title:'生产级改动展示 Mock → 真实 Runtime。',
+      why:'先把 mock/local state 如何变成真实 route + API + browser verification 动态画出来，再把真正 Preview URL 交给 Human 上手。',
       cost:'高保真 · 真实 Runtime',
-      html:'<div class="browser"><div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">preview-abc123.vercel.app</span></div><div class="browser-body"><div style="display:flex;justify-content:space-between;align-items:center"><div><div class="eyebrow">PRODUCTION-LIKE</div><h3 style="margin-top:5px">Real route + API + state</h3></div><span class="pill" style="border-color:var(--olive);color:#66794C">runtime verified</span></div><div style="margin-top:20px;height:110px;border:1px solid var(--g300);border-radius:10px;background:var(--g100)"></div></div></div>'
+      html:assetDemo('runtime-before-now.svg','真实 Runtime')
     }
   };
-
   var liveSvgFrame=null;
   var liveSvgPlaying=false;
   var liveSvgStart=0;
@@ -458,7 +413,7 @@ h3{font-size:20px}
       button.setAttribute('rx',mix(2,16,t).toFixed(1));
       button.setAttribute('stroke',hexMix('#3D3D3A','#D97757',t));
       button.setAttribute('fill',hexMix('#FFFFFF','#FBF0EC',t));
-      label.textContent=t>.55?'圆角 · AFTER':'方角 · BEFORE';
+      label.textContent=t>.55?'圆角 · NOW':'方角 · BEFORE';
       label.setAttribute('fill',t>.55?'#B85C3E':'#87867F');
       progressText.textContent=Math.round(t*100)+'%';
     }
