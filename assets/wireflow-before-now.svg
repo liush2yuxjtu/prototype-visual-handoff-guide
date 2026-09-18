@@ -1,41 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
-<title id="t">流程改动：三步静态流程变成带搜索状态的四步 Wireflow</title><desc id="d">BEFORE 的三步流程逐渐变化为 NOW 的四个完整 Screen 状态。</desc>
-
-<style>
-  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
-  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
-  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-  text{dominant-baseline:middle}
-</style>
-<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#D97757"/></marker></defs>
-<rect width="760" height="380" rx="28" class="bg"/>
-<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · WIREFLOW</text>
-<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
-<g>
-  <rect x="76" y="124" width="150" height="158" rx="12" class="paper line"/><text x="92" y="145" class="mono muted" font-size="10">S01 · IDLE</text>
-  <rect x="94" y="165" width="112" height="12" rx="6" class="soft"/><rect x="94" y="194" width="112" height="42" rx="7" fill="#F0EEE6"/>
-  <path d="M242 203H296" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
-  <rect x="312" y="124" width="150" height="158" rx="12" class="paper line"/><text x="328" y="145" class="mono muted" font-size="10">S02 · RESULTS</text>
-  <rect x="330" y="165" width="112" height="12" rx="6" class="soft"/><rect x="330" y="194" width="112" height="18" rx="5" class="soft"/><rect x="330" y="221" width="112" height="18" rx="5" class="soft"/>
-  <path d="M478 203H532" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
-  <rect x="548" y="124" width="136" height="158" rx="12" class="paper line"/><text x="564" y="145" class="mono muted" font-size="10">S03 · DETAIL</text>
-  <rect x="566" y="165" width="100" height="12" rx="6" class="soft"/><rect x="566" y="194" width="100" height="56" rx="7" fill="#F0EEE6"/>
-  <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.28;0.48;1" dur="6s" repeatCount="1" fill="freeze"/>
-</g>
-<g opacity="0">
-  <rect x="38" y="124" width="136" height="158" rx="12" class="paper line"/><text x="54" y="145" class="mono muted" font-size="10">S01 · IDLE</text>
-  <rect x="56" y="168" width="100" height="12" rx="6" class="soft"/><rect x="56" y="198" width="100" height="42" rx="7" fill="#F0EEE6"/>
-  <path d="M184 203H214" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
-  <rect x="224" y="124" width="136" height="158" rx="12" fill="#FBF0EC" stroke="#D97757" stroke-width="2"/><text x="240" y="145" class="mono clay" font-size="10">S02 · SEARCHING</text>
-  <rect x="242" y="168" width="100" height="12" rx="6" class="soft"/><rect x="242" y="198" width="100" height="42" rx="7" fill="#E6E3DA"/>
-  <circle cx="292" cy="219" r="8" fill="none" stroke="#D97757" stroke-width="3" stroke-dasharray="13 8"><animateTransform attributeName="transform" type="rotate" from="0 292 219" to="360 292 219" dur="1s" repeatCount="1" fill="freeze"/></circle>
-  <path d="M370 203H400" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
-  <rect x="410" y="124" width="136" height="158" rx="12" class="paper line"/><text x="426" y="145" class="mono muted" font-size="10">S03 · RESULTS</text>
-  <rect x="428" y="168" width="100" height="12" rx="6" class="soft"/><rect x="428" y="198" width="100" height="18" rx="5" class="soft"/><rect x="428" y="225" width="100" height="18" rx="5" class="soft"/>
-  <path d="M556 203H586" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
-  <rect x="596" y="124" width="126" height="158" rx="12" class="paper line"/><text x="612" y="145" class="mono muted" font-size="10">S04 · DETAIL</text>
-  <rect x="614" y="168" width="90" height="12" rx="6" class="soft"/><rect x="614" y="198" width="90" height="56" rx="7" fill="#F0EEE6"/>
-  <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.52;1" dur="6s" repeatCount="1" fill="freeze"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="t d">
+  <title id="t">Wireflow Before to Now Progressive SVG Diff</title>
+  <desc id="d">Two-artifact Before to Now progressive line-draw SVG diff. The Before artifact stays visible on the left while the Now artifact is progressively drawn on the right.</desc>
+  <style>
+    .bg{fill:#FAF9F5}.card{fill:#fff;stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}.ink{fill:#141413}.clay{fill:#B85C3E}
+    .label{font:700 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.title{font:600 19px system-ui,-apple-system,Segoe UI,sans-serif}
+    .body{font:13px system-ui,-apple-system,Segoe UI,sans-serif}.line{stroke:#3D3D3A;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .soft{stroke:#D1CFC5;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .now{stroke:#D97757}.fillNow{fill:#FBF0EC;stroke:#D97757;stroke-width:2}.fillSoft{fill:#fff;stroke:#D1CFC5;stroke-width:2}
+    .draw{fill:none;stroke:#D97757;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .drawSoft{fill:none;stroke:#3D3D3A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .fade{opacity:0}.arrow{stroke:#87867F;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+    @media (prefers-reduced-motion:reduce){.draw,.drawSoft,.arrow{stroke-dashoffset:0}.fade{opacity:1}}
+  </style>
+  <rect class="bg" width="920" height="420" rx="24"/>
+  <text x="52" y="48" class="label muted">BEFORE</text>
+  <text x="584" y="48" class="label clay">NOW</text>
+  <text x="52" y="79" class="title ink">Two-step flow → explicit state sequence</text>
+  <g transform="translate(52 105)">
+    <rect x="0" y="28" width="95" height="135" rx="10" class="card"/><rect x="20" y="50" width="55" height="8" rx="4" fill="#D1CFC5"/><rect x="20" y="75" width="55" height="36" rx="6" class="fillSoft"/>
+    <path d="M108 95 H144" class="soft"/><path d="M135 86 L144 95 L135 104" class="soft"/>
+    <rect x="158" y="28" width="95" height="135" rx="10" class="card"/><rect x="178" y="50" width="55" height="8" rx="4" fill="#D1CFC5"/><rect x="178" y="75" width="55" height="36" rx="6" class="fillSoft"/></g>
+  <g>
+    <path class="arrow" pathLength="1" d="M420 210 H500"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".6s" begin=".25s" fill="freeze"/></path>
+    <path class="arrow" pathLength="1" d="M489 199 L500 210 L489 221"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".35s" begin=".68s" fill="freeze"/></path>
+  </g>
+  <g transform="translate(584 105)">
+    <rect x="0" y="28" width="62" height="135" rx="9" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".45s" begin="1s" fill="freeze"/></rect>
+    <path d="M12 54 H48 M12 77 H48" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".3s" begin="1.4s" fill="freeze"/></path>
+    <path d="M70 95 H86" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".2s" begin="1.65s" fill="freeze"/></path>
+    <rect x="94" y="28" width="62" height="135" rx="9" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".45s" begin="1.8s" fill="freeze"/></rect>
+    <path d="M106 54 H142 M106 77 H142" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".3s" begin="2.2s" fill="freeze"/></path>
+    <path d="M164 95 H180" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".2s" begin="2.45s" fill="freeze"/></path>
+    <rect x="188" y="28" width="62" height="135" rx="9" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".45s" begin="2.6s" fill="freeze"/></rect>
+    <path d="M200 54 H236 M200 77 H236 M200 100 H236" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".4s" begin="3s" fill="freeze"/></path>
+    <text x="31" y="184" text-anchor="middle" class="body muted fade">Idle<animate attributeName="opacity" from="0" to="1" dur=".2s" begin="3.3s" fill="freeze"/></text>
+    <text x="125" y="184" text-anchor="middle" class="body muted fade">Loading<animate attributeName="opacity" from="0" to="1" dur=".2s" begin="3.45s" fill="freeze"/></text>
+    <text x="219" y="184" text-anchor="middle" class="body clay fade">Results<animate attributeName="opacity" from="0" to="1" dur=".2s" begin="3.6s" fill="freeze"/></text></g>
+  <text x="52" y="392" class="body muted">Before remains visible · Now is progressively generated line by line</text>
 </svg>
