@@ -15,7 +15,12 @@ p{color:var(--muted);max-width:760px}.toolbar{display:flex;gap:10px;flex-wrap:wr
 <div class="mono">Reusable SVG assets · GitHub Pages</div>
 <h1>BEFORE → NOW<br>Progressive SVG Diff</h1>
 <p>每个变化都是独立的 <code>.svg</code> 文件，采用 <b>dual-artifact comparison</b>：左侧 BEFORE artifact 始终可见，右侧 NOW artifact 用 <b>progressive line-draw animation</b> 逐线生成并停在 NOW。HTML 只引用 SVG URL；Agent 可在其它 Pages、spec、prototype 或 handoff 中直接复用。</p>
-<div class="toolbar"><button class="btn primary" type="button" id="replayAll">Replay all</button><span class="mono" style="align-self:center">TWO ARTIFACTS · BEFORE [LEFT] → NOW [RIGHT] · PROGRESSIVE LINE-DRAW</span></div>
+<div class="toolbar"><button class="btn primary" type="button" id="replayAll">Replay all</button><span class="mono" style="align-self:center">BEFORE [ARTIFACT] → NOW [ARTIFACT] · PROGRESSIVE LINE-DRAW</span></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 22px">
+  <div class="card" style="padding:12px"><div class="mono">ARTIFACT TYPE</div><b>Before → Now Progressive SVG Diff</b></div>
+  <div class="card" style="padding:12px"><div class="mono">STRUCTURE</div><b>dual-artifact comparison</b></div>
+  <div class="card" style="padding:12px"><div class="mono">ANIMATION</div><b>progressive line-draw / stroke-draw</b></div>
+</div>
 <div class="grid">
 <article class="card"><img src="assets/micro-ui-before-now.svg" alt="Micro UI Before → Now Progressive SVG Diff"><div class="meta"><b>Micro UI</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/micro-ui-before-now.svg">OPEN SVG ↗</a></div></div></article>
 <article class="card"><img src="assets/layout-before-now.svg" alt="Page Layout Before → Now Progressive SVG Diff"><div class="meta"><b>Page Layout</b><div class="actions"><button class="replay" type="button">REPLAY ↻</button><a href="assets/layout-before-now.svg">OPEN SVG ↗</a></div></div></article>
