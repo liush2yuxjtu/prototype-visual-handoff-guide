@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+<title id="t">流程改动：三步静态流程变成带搜索状态的四步 Wireflow</title><desc id="d">BEFORE 的三步流程逐渐变化为 NOW 的四个完整 Screen 状态。</desc>
+
+<style>
+  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
+  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
+  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+  text{dominant-baseline:middle}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#D97757"/></marker></defs>
+<rect width="760" height="380" rx="28" class="bg"/>
+<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · WIREFLOW</text>
+<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
+<g>
+  <rect x="76" y="124" width="150" height="158" rx="12" class="paper line"/><text x="92" y="145" class="mono muted" font-size="10">S01 · IDLE</text>
+  <rect x="94" y="165" width="112" height="12" rx="6" class="soft"/><rect x="94" y="194" width="112" height="42" rx="7" fill="#F0EEE6"/>
+  <path d="M242 203H296" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="312" y="124" width="150" height="158" rx="12" class="paper line"/><text x="328" y="145" class="mono muted" font-size="10">S02 · RESULTS</text>
+  <rect x="330" y="165" width="112" height="12" rx="6" class="soft"/><rect x="330" y="194" width="112" height="18" rx="5" class="soft"/><rect x="330" y="221" width="112" height="18" rx="5" class="soft"/>
+  <path d="M478 203H532" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="548" y="124" width="136" height="158" rx="12" class="paper line"/><text x="564" y="145" class="mono muted" font-size="10">S03 · DETAIL</text>
+  <rect x="566" y="165" width="100" height="12" rx="6" class="soft"/><rect x="566" y="194" width="100" height="56" rx="7" fill="#F0EEE6"/>
+  <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.20;0.45;0.88;1" dur="6s" repeatCount="indefinite"/>
+</g>
+<g opacity="0">
+  <rect x="38" y="124" width="136" height="158" rx="12" class="paper line"/><text x="54" y="145" class="mono muted" font-size="10">S01 · IDLE</text>
+  <rect x="56" y="168" width="100" height="12" rx="6" class="soft"/><rect x="56" y="198" width="100" height="42" rx="7" fill="#F0EEE6"/>
+  <path d="M184 203H214" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="224" y="124" width="136" height="158" rx="12" fill="#FBF0EC" stroke="#D97757" stroke-width="2"/><text x="240" y="145" class="mono clay" font-size="10">S02 · SEARCHING</text>
+  <rect x="242" y="168" width="100" height="12" rx="6" class="soft"/><rect x="242" y="198" width="100" height="42" rx="7" fill="#E6E3DA"/>
+  <circle cx="292" cy="219" r="8" fill="none" stroke="#D97757" stroke-width="3" stroke-dasharray="13 8"><animateTransform attributeName="transform" type="rotate" from="0 292 219" to="360 292 219" dur="1s" repeatCount="indefinite"/></circle>
+  <path d="M370 203H400" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="410" y="124" width="136" height="158" rx="12" class="paper line"/><text x="426" y="145" class="mono muted" font-size="10">S03 · RESULTS</text>
+  <rect x="428" y="168" width="100" height="12" rx="6" class="soft"/><rect x="428" y="198" width="100" height="18" rx="5" class="soft"/><rect x="428" y="225" width="100" height="18" rx="5" class="soft"/>
+  <path d="M556 203H586" stroke="#D97757" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="596" y="124" width="126" height="158" rx="12" class="paper line"/><text x="612" y="145" class="mono muted" font-size="10">S04 · DETAIL</text>
+  <rect x="614" y="168" width="90" height="12" rx="6" class="soft"/><rect x="614" y="198" width="90" height="56" rx="7" fill="#F0EEE6"/>
+  <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.28;0.52;0.88;1" dur="6s" repeatCount="indefinite"/>
+</g>
+</svg>
