@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+<title id="t">分享方式改动：本地 HTML 变成 GitHub Pages URL</title><desc id="d">本地 prototype 文件连续变化成公开可分享的 GitHub Pages 页面。</desc>
+
+<style>
+  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
+  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
+  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+  text{dominant-baseline:middle}
+</style>
+<rect width="760" height="380" rx="28" class="bg"/>
+<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · SHARE</text>
+<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
+<g>
+ <rect x="98" y="126" width="240" height="170" rx="14" class="paper line"/>
+ <path d="M142 158h86l26 26v76H142z" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="2"/><path d="M228 158v26h26" fill="none" stroke="#D1CFC5" stroke-width="2"/>
+ <text x="185" y="220" class="mono muted" font-size="12">prototype.html</text><text x="165" y="250" class="sans muted" font-size="13">只在本地</text>
+ <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.22;0.50;0.86;1" dur="5.5s" repeatCount="indefinite"/>
+</g>
+<path d="M365 211H430" stroke="#D97757" stroke-width="3" stroke-linecap="round"/>
+<path d="M421 202l12 9-12 9" fill="none" stroke="#D97757" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g opacity="0">
+ <rect x="456" y="126" width="230" height="170" rx="14" class="paper" stroke="#D97757" stroke-width="2"/>
+ <rect x="456" y="126" width="230" height="34" rx="14" fill="#F0EEE6"/><circle cx="475" cy="143" r="4" fill="#D1CFC5"/><circle cx="488" cy="143" r="4" fill="#D1CFC5"/><circle cx="501" cy="143" r="4" fill="#D1CFC5"/>
+ <rect x="478" y="177" width="185" height="25" rx="8" fill="#FBF0EC" stroke="#D97757"/><text x="570" y="190" text-anchor="middle" class="mono clay" font-size="9">…github.io/prototype/</text>
+ <rect x="478" y="220" width="78" height="45" rx="8" fill="#F0EEE6"/><rect x="568" y="220" width="95" height="45" rx="8" fill="#F0EEE6"/>
+ <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.34;0.56;0.86;1" dur="5.5s" repeatCount="indefinite"/>
+</g>
+<text x="98" y="326" class="mono muted" font-size="11">BEFORE · LOCAL ONLY</text><g opacity="0"><text x="456" y="326" class="mono clay" font-size="11">NOW · SHAREABLE PRIMARY SOURCE</text><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.34;0.56;0.86;1" dur="5.5s" repeatCount="indefinite"/></g>
+</svg>
