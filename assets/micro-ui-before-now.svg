@@ -1,37 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
-<title id="t">微小 UI 改动：方角按钮变成圆角按钮</title><desc id="d">同一个面板和按钮从 BEFORE 连续变成 NOW。</desc>
-
-<style>
-  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
-  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
-  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-  text{dominant-baseline:middle}
-</style>
-<rect width="760" height="380" rx="28" class="bg"/>
-<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · MICRO UI</text>
-<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
-<rect x="96" y="112" width="568" height="205" rx="6" class="paper line">
-  <animate attributeName="rx" values="6;6;24;24" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="5s" repeatCount="1" fill="freeze"/>
-  <animate attributeName="stroke" values="#D1CFC5;#D1CFC5;#E4A18A;#E4A18A" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="5s" repeatCount="1" fill="freeze"/>
-</rect>
-<rect x="132" y="147" width="130" height="12" rx="6" fill="#D1CFC5"/>
-<rect x="132" y="181" width="362" height="10" rx="5" class="soft"/>
-<rect x="132" y="207" width="286" height="10" rx="5" class="soft"/>
-<rect x="132" y="248" width="126" height="46" rx="2" fill="#fff" stroke="#3D3D3A" stroke-width="2">
-  <animate attributeName="rx" values="2;2;16;16" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="5s" repeatCount="1" fill="freeze"/>
-  <animate attributeName="fill" values="#fff;#fff;#FBF0EC;#FBF0EC" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="5s" repeatCount="1" fill="freeze"/>
-  <animate attributeName="stroke" values="#3D3D3A;#3D3D3A;#D97757;#D97757" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="5s" repeatCount="1" fill="freeze"/>
-</rect>
-<text x="195" y="271" text-anchor="middle" class="sans ink" font-size="15" font-weight="650">保存</text>
-<g>
- <text x="514" y="272" class="mono muted" font-size="13">BEFORE · 方角</text>
- <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.28;0.48;1" dur="5s" repeatCount="1" fill="freeze"/>
-</g>
-<g opacity="0">
- <text x="514" y="272" class="mono clay" font-size="13">NOW · 圆角</text>
- <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.52;1" dur="5s" repeatCount="1" fill="freeze"/>
-</g>
-<path d="M424 271 H488" stroke="#D97757" stroke-width="2" stroke-linecap="round"/>
-<circle cx="424" cy="271" r="4" class="clay"><animate attributeName="cx" values="424;424;488;488" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="5s" repeatCount="1" fill="freeze"/></circle>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="t d">
+  <title id="t">Micro UI Before to Now Progressive SVG Diff</title>
+  <desc id="d">Two-artifact Before to Now progressive line-draw SVG diff. The Before artifact stays visible on the left while the Now artifact is progressively drawn on the right.</desc>
+  <style>
+    .bg{fill:#FAF9F5}.card{fill:#fff;stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}.ink{fill:#141413}.clay{fill:#B85C3E}
+    .label{font:700 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.title{font:600 19px system-ui,-apple-system,Segoe UI,sans-serif}
+    .body{font:13px system-ui,-apple-system,Segoe UI,sans-serif}.line{stroke:#3D3D3A;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .soft{stroke:#D1CFC5;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .now{stroke:#D97757}.fillNow{fill:#FBF0EC;stroke:#D97757;stroke-width:2}.fillSoft{fill:#fff;stroke:#D1CFC5;stroke-width:2}
+    .draw{fill:none;stroke:#D97757;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .drawSoft{fill:none;stroke:#3D3D3A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .fade{opacity:0}.arrow{stroke:#87867F;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+    @media (prefers-reduced-motion:reduce){.draw,.drawSoft,.arrow{stroke-dashoffset:0}.fade{opacity:1}}
+  </style>
+  <rect class="bg" width="920" height="420" rx="24"/>
+  <text x="52" y="48" class="label muted">BEFORE</text>
+  <text x="584" y="48" class="label clay">NOW</text>
+  <text x="52" y="79" class="title ink">Button + panel refinement</text>
+  <g transform="translate(52 105)">
+<rect x="0" y="0" width="280" height="205" rx="8" class="card"/>
+<path d="M25 35 H105" class="soft"/><path d="M25 64 H235" class="soft"/><path d="M25 88 H190" class="soft"/>
+<rect x="25" y="128" width="92" height="44" rx="2" class="fillSoft"/><text x="71" y="156" text-anchor="middle" class="body ink">Save</text></g>
+  <g>
+    <path class="arrow" pathLength="1" d="M420 210 H500"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".6s" begin=".25s" fill="freeze"/></path>
+    <path class="arrow" pathLength="1" d="M489 199 L500 210 L489 221"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".35s" begin=".68s" fill="freeze"/></path>
+  </g>
+  <g transform="translate(584 105)">
+    <rect x="0" y="0" width="280" height="205" rx="20" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".75s" begin="1s" fill="freeze"/></rect>
+    <path d="M25 35 H105" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".35s" begin="1.7s" fill="freeze"/></path>
+    <path d="M25 64 H235" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".45s" begin="1.95s" fill="freeze"/></path>
+    <path d="M25 88 H190" class="drawSoft" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".4s" begin="2.25s" fill="freeze"/></path>
+    <rect x="25" y="128" width="92" height="44" rx="14" class="draw" pathLength="1"><animate attributeName="stroke-dashoffset" from="1" to="0" dur=".5s" begin="2.55s" fill="freeze"/></rect>
+    <rect x="25" y="128" width="92" height="44" rx="14" class="fillNow fade"><animate attributeName="opacity" from="0" to="1" dur=".3s" begin="3.02s" fill="freeze"/></rect>
+    <text x="71" y="156" text-anchor="middle" class="body ink fade">Save<animate attributeName="opacity" from="0" to="1" dur=".25s" begin="3.18s" fill="freeze"/></text></g>
+  <text x="52" y="392" class="body muted">Before remains visible · Now is progressively generated line by line</text>
 </svg>
