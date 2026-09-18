@@ -143,7 +143,7 @@ h3{font-size:20px}
     <div class="eyebrow">Prototype Delivery · Visual-first</div>
     <h1>不要解释给我听。<br><em>先让我看见，再让我上手。</em></h1>
     <p class="lead">把 Matt Pocock 的保真度梯子，改造成一套适合 ChatGPT → Human → Coding Agent 的可视化交付路由。</p>
-    <div class="hero-note"><b>唯一原则：</b>不用固定走完整流程。选择“足以回答当前问题的最低复杂度可视化”。所有“改动”默认用 <b>BEFORE → NOW</b> 动画呈现，而不是两张静态快照。</div>
+    <div class="hero-note"><b>唯一原则：</b>不用固定走完整流程。选择“足以回答当前问题的最低复杂度可视化”。所有“改动”默认用 <b>Before → Now Progressive SVG Diff</b>：两个 artifact 同时存在，左边 BEFORE 保持可见，右边 NOW 用 progressive line-draw 逐线生成。</div>
   </header>
 
   <section class="section">
@@ -189,7 +189,7 @@ h3{font-size:20px}
         <div class="eyebrow">02 · ChatGPT-native router</div>
         <h2>但我们的交付方式不必照着梯子走</h2>
       </div>
-      <div class="section-note">点左边一种改动，右边直接播放对应的 BEFORE → NOW SVG。每个动画也是一个独立 GitHub 文件。</div>
+      <div class="section-note">点左边一种改动，右边直接播放对应的 <b>Before → Now Progressive SVG Diff</b>。每个 SVG 都是两个 artifact：BEFORE [左] → NOW [右]；NOW 逐线生成。</div>
     </div>
 
     <div class="router">
@@ -217,9 +217,9 @@ h3{font-size:20px}
       <div class="card route-stage">
         <div class="topline">
           <div>
-            <div class="recommend" id="recommend">推荐 · LIVE SVG ANIMATION</div>
+            <div class="recommend" id="recommend">推荐 · BEFORE → NOW PROGRESSIVE SVG DIFF</div>
             <h3 id="routeTitle">只改一个按钮？不要先动源码。</h3>
-            <div class="why" id="routeWhy">直接让按钮和它所在的 panel 在原位从旧状态连续变成新状态，让 Human 看见“变化本身”。流程图、Breadboard、完整 Prototype 都太重。</div>
+            <div class="why" id="routeWhy">不要把旧 UI morph 掉。保留 BEFORE artifact，同时在右侧逐线生成 NOW artifact；Human 同时看见“从什么”与“变成什么”。</div>
           </div>
           <span class="pill" id="costPill">≈ 30 秒理解成本</span>
         </div>
@@ -238,8 +238,8 @@ h3{font-size:20px}
     </div>
     <div class="card" style="padding:18px">
       <div class="asset-demo" style="margin:auto">
-        <img src="assets/wireflow-before-now.svg" alt="旧流程到当前 Wireflow 的 BEFORE 到 NOW 动画">
-        <div class="asset-caption"><span>OLD FLOW → CURRENT WIREFLOW</span><a href="assets/wireflow-before-now.svg">OPEN SVG ↗</a></div>
+        <img src="assets/wireflow-before-now.svg" alt="旧流程到当前 Wireflow 的 Before → Now Progressive SVG Diff">
+        <div class="asset-caption"><span>BEFORE FLOW → NOW WIREFLOW · PROGRESSIVE LINE-DRAW</span><a href="assets/wireflow-before-now.svg">OPEN SVG ↗</a></div>
       </div>
     </div>
   </section>
@@ -255,8 +255,8 @@ h3{font-size:20px}
 
     <div class="card" style="padding:18px;margin-bottom:18px">
       <div class="asset-demo" style="margin:auto">
-        <img src="assets/handoff-before-now.svg" alt="冗长 Handoff 到 Primary Source 索引的 BEFORE 到 NOW 动画">
-        <div class="asset-caption"><span>LONG HANDOFF → PRIMARY SOURCE INDEX</span><a href="assets/handoff-before-now.svg">OPEN SVG ↗</a></div>
+        <img src="assets/handoff-before-now.svg" alt="冗长 Handoff 到 Primary Source 索引的 Before → Now Progressive SVG Diff">
+        <div class="asset-caption"><span>BEFORE HANDOFF → NOW PRIMARY SOURCE INDEX · PROGRESSIVE LINE-DRAW</span><a href="assets/handoff-before-now.svg">OPEN SVG ↗</a></div>
       </div>
     </div>
     <div class="handoff">
@@ -300,18 +300,18 @@ h3{font-size:20px}
       </div>
     </div>
     <div class="asset-grid">
-      <div class="asset-card"><img src="assets/micro-ui-before-now.svg" alt="Micro UI BEFORE 到 NOW 动画"><div class="meta"><b>Micro UI</b><a href="assets/micro-ui-before-now.svg">SVG ↗</a></div></div>
-      <div class="asset-card"><img src="assets/layout-before-now.svg" alt="Layout BEFORE 到 NOW 动画"><div class="meta"><b>Layout</b><a href="assets/layout-before-now.svg">SVG ↗</a></div></div>
-      <div class="asset-card"><img src="assets/wireflow-before-now.svg" alt="Wireflow BEFORE 到 NOW 动画"><div class="meta"><b>Flow / State</b><a href="assets/wireflow-before-now.svg">SVG ↗</a></div></div>
-      <div class="asset-card"><img src="assets/interaction-before-now.svg" alt="Interaction BEFORE 到 NOW 动画"><div class="meta"><b>Interaction</b><a href="assets/interaction-before-now.svg">SVG ↗</a></div></div>
-      <div class="asset-card"><img src="assets/share-before-now.svg" alt="Share BEFORE 到 NOW 动画"><div class="meta"><b>GitHub Pages</b><a href="assets/share-before-now.svg">SVG ↗</a></div></div>
-      <div class="asset-card"><img src="assets/runtime-before-now.svg" alt="Runtime BEFORE 到 NOW 动画"><div class="meta"><b>Vercel Preview</b><a href="assets/runtime-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/micro-ui-before-now.svg" alt="Micro UI Before → Now Progressive SVG Diff"><div class="meta"><b>Micro UI</b><a href="assets/micro-ui-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/layout-before-now.svg" alt="Layout Before → Now Progressive SVG Diff"><div class="meta"><b>Layout</b><a href="assets/layout-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/wireflow-before-now.svg" alt="Wireflow Before → Now Progressive SVG Diff"><div class="meta"><b>Flow / State</b><a href="assets/wireflow-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/interaction-before-now.svg" alt="Interaction Before → Now Progressive SVG Diff"><div class="meta"><b>Interaction</b><a href="assets/interaction-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/share-before-now.svg" alt="Share Before → Now Progressive SVG Diff"><div class="meta"><b>GitHub Pages</b><a href="assets/share-before-now.svg">SVG ↗</a></div></div>
+      <div class="asset-card"><img src="assets/runtime-before-now.svg" alt="Runtime Before → Now Progressive SVG Diff"><div class="meta"><b>Vercel Preview</b><a href="assets/runtime-before-now.svg">SVG ↗</a></div></div>
     </div>
-    <div style="margin-top:18px"><a class="pill" style="text-decoration:none;color:var(--clay)" href="animation-gallery.html">打开完整 Animation Gallery →</a></div>
+    <div style="margin-top:18px"><a class="pill" style="text-decoration:none;color:var(--clay)" href="animation-gallery.html">打开 Progressive SVG Diff Gallery →</a></div>
   </section>
 
   <footer class="footer-rule">
-    <span>Visual-first Prototype Delivery · v3 · BEFORE → NOW SVG Library</span>
+    <span>Visual-first Prototype Delivery · v4 · Before → Now Progressive SVG Diff</span>
     <span>Human reacts to the thing → Agent implements the decision.</span>
   </footer>
 </div>
@@ -328,47 +328,47 @@ h3{font-size:20px}
   var assetBase='https://liush2yuxjtu.github.io/prototype-visual-handoff-guide/assets/';
   function assetDemo(file,label){
     var url=assetBase+file;
-    return '<div class="asset-demo"><img src="'+url+'" alt="'+label+' BEFORE 到 NOW 动画"><div class="asset-caption"><span>BEFORE → NOW · LIVE SVG</span><a href="'+url+'" target="_blank" rel="noreferrer">OPEN SVG ↗</a></div></div>';
+    return '<div class="asset-demo"><img src="'+url+'" alt="'+label+' Before → Now Progressive SVG Diff"><div class="asset-caption"><span>BEFORE [ARTIFACT] → NOW [ARTIFACT] · PROGRESSIVE LINE-DRAW</span><a href="'+url+'" target="_blank" rel="noreferrer">OPEN SVG ↗</a></div></div>';
   }
 
   var data={
     micro:{
-      rec:'推荐 · LIVE SVG · BEFORE → NOW',
+      rec:'推荐 · BEFORE → NOW PROGRESSIVE SVG DIFF',
       title:'只改一个按钮？让 Human 直接看见旧状态如何变成现在。',
-      why:'不是两张静态 Before → Now。一个独立 SVG 在原位连续展示方角按钮与 panel 如何变成当前圆角方案。',
+      why:'左侧固定保留 BEFORE 按钮与 panel；右侧 NOW 方案按轮廓、文字线、按钮依次画出来。不是 morph，也不是两张静态快照。',
       cost:'最低成本 · 动态视觉判断',
       html:assetDemo('micro-ui-before-now.svg','微小 UI')
     },
     layout:{
-      rec:'推荐 · LIVE SVG WIREFRAME CHANGE',
+      rec:'推荐 · BEFORE → NOW PROGRESSIVE WIREFRAME DIFF',
       title:'页面层级变化，也直接播放 BEFORE → NOW。',
-      why:'Sidebar → Top Nav、单列 → 双列这类结构变化，用动态 Wireframe 表达“旧布局如何变成当前布局”。',
+      why:'左边保留旧布局 artifact；右边逐线生成当前布局，让 Sidebar → Top Nav、单列 → 双列的结构差异同时可见。',
       cost:'低成本 · 结构变化',
       html:assetDemo('layout-before-now.svg','页面布局')
     },
     flow:{
-      rec:'推荐 · LIVE SVG WIREFLOW CHANGE',
+      rec:'推荐 · BEFORE → NOW PROGRESSIVE WIREFLOW DIFF',
       title:'流程变化不只画新 Flow，而是播放旧 Flow → 当前 Flow。',
-      why:'新增 Searching、Confirm、Error 等状态时，让 Screen sequence 本身发生变化，比静态流程图更容易看出产品意义。',
+      why:'左边显示旧 Flow artifact；右边按 Screen → transition → state 的顺序逐线生成 NOW Flow。Human 不需要在脑中记住旧流程。',
       cost:'中等成本 · Flow 变化',
       html:assetDemo('wireflow-before-now.svg','Wireflow')
     },
     interaction:{
-      rec:'推荐 · LIVE SVG STATE CHANGE + RUNNABLE',
+      rec:'推荐 · BEFORE → NOW PROGRESSIVE STATE DIFF + RUNNABLE',
       title:'交互先看 BEFORE → NOW；需要感觉时再直接上手。',
-      why:'动画先说明“无反馈 → Loading → Done”发生了什么；如果 Human 还需要判断手感，再升级成 ChatGPT Inline App / Runnable Prototype。',
+      why:'两个 artifact 先把“无反馈”与“有反馈状态”并置，NOW 再逐线生成；如果还需要判断手感，再升级成 Runnable Prototype。',
       cost:'中等成本 · 状态 + 手感',
       html:assetDemo('interaction-before-now.svg','交互状态')
     },
     share:{
-      rec:'推荐 · LIVE SVG + GITHUB PAGES',
+      rec:'推荐 · BEFORE → NOW PROGRESSIVE SVG DIFF + GITHUB PAGES',
       title:'分享方式也展示“本地 → 可分享 Primary Source”。',
       why:'动画表达本地 prototype.html 如何变成稳定 GitHub Pages URL；实际 SVG 本身也放在 GitHub，可以被其它页面直接引用。',
       cost:'可分享 · 独立 URL',
       html:assetDemo('share-before-now.svg','GitHub Pages 分享')
     },
     real:{
-      rec:'推荐 · LIVE SVG + VERCEL PREVIEW',
+      rec:'推荐 · BEFORE → NOW PROGRESSIVE SVG DIFF + VERCEL PREVIEW',
       title:'生产级改动展示 Mock → 真实 Runtime。',
       why:'先把 mock/local state 如何变成真实 route + API + browser verification 动态画出来，再把真正 Preview URL 交给 Human 上手。',
       cost:'高保真 · 真实 Runtime',
