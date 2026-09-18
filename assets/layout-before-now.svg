@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+<title id="t">页面布局改动：侧栏变成顶部导航</title><desc id="d">旧的 sidebar 布局连续变化到新的 top navigation 布局。</desc>
+
+<style>
+  .bg{fill:#F8F7F2}.paper{fill:#fff}.line{stroke:#D1CFC5;stroke-width:2}.muted{fill:#87867F}
+  .ink{fill:#141413}.clay{fill:#D97757}.soft{fill:#E6E3DA}.accentSoft{fill:#FBF0EC}
+  .olive{fill:#788C5D}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+  text{dominant-baseline:middle}
+</style>
+<rect width="760" height="380" rx="28" class="bg"/>
+<text x="42" y="42" class="mono muted" font-size="13">LIVE CHANGE · PAGE LAYOUT</text>
+<text x="42" y="72" class="sans ink" font-size="24" font-weight="650">BEFORE → NOW</text>
+<rect x="70" y="106" width="620" height="228" rx="15" class="paper line"/>
+<g>
+  <rect x="92" y="128" width="150" height="184" rx="10" fill="#F0EEE6" stroke="#D1CFC5"/>
+  <rect x="112" y="151" width="86" height="10" rx="5" fill="#D1CFC5"/>
+  <rect x="112" y="181" width="100" height="8" rx="4" class="soft"/>
+  <rect x="112" y="205" width="82" height="8" rx="4" class="soft"/>
+  <rect x="112" y="229" width="92" height="8" rx="4" class="soft"/>
+  <rect x="266" y="128" width="400" height="48" rx="9" fill="#fff" stroke="#D1CFC5"/>
+  <rect x="266" y="194" width="190" height="118" rx="10" fill="#fff" stroke="#D1CFC5"/>
+  <rect x="476" y="194" width="190" height="118" rx="10" fill="#fff" stroke="#D1CFC5"/>
+  <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.22;0.48;0.86;1" dur="5.5s" repeatCount="indefinite"/>
+</g>
+<g opacity="0">
+  <rect x="92" y="128" width="574" height="48" rx="14" fill="#FBF0EC" stroke="#D97757"/>
+  <rect x="112" y="147" width="94" height="10" rx="5" fill="#D97757"/>
+  <rect x="238" y="145" width="76" height="14" rx="7" fill="#E6E3DA"/>
+  <rect x="330" y="145" width="76" height="14" rx="7" fill="#E6E3DA"/>
+  <rect x="92" y="194" width="270" height="118" rx="14" fill="#fff" stroke="#D1CFC5"/>
+  <rect x="380" y="194" width="286" height="118" rx="14" fill="#fff" stroke="#D1CFC5"/>
+  <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.30;0.54;0.86;1" dur="5.5s" repeatCount="indefinite"/>
+</g>
+<text x="585" y="84" class="mono muted" font-size="12">SIDEBAR</text>
+<g opacity="0"><text x="585" y="84" class="mono clay" font-size="12">TOP NAV</text><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.30;0.54;0.86;1" dur="5.5s" repeatCount="indefinite"/></g>
+</svg>
